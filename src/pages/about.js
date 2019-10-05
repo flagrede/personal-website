@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import dogIllustration from "../images/dog-illustration.svg";
+import cvIllustration from "../images/undraw_online_cv.svg";
 
 function AboutPage() {
   return (
@@ -12,23 +12,24 @@ function AboutPage() {
         title="About"
       />
 
-      <section className="flex flex-col md:flex-row items-center">
-        <div className="md:w-2/3 md:mr-8">
-          <blockquote className="border-l-4 border-gray-900 font-serif leading-loose pl-4 text-justify">
-            The point is... to live one's life in the full complexity of what
-            one is, which is something much darker, more contradictory, more of
-            a maelstrom of impulses and passions, of cruelty, ecstacy, and
-            madness, than is apparent to the civilized being who glides on the
-            surface and fits smoothly into the world.
+      <section className="flex flex-col md:flex-row items-center md:justify-center">
+        <div className="md:w-1/3 md:mr-8">
+          <blockquote className="border-l-4 border-gray-900 text-gray-800 leading-loose pl-4 text-justify">
+            I'm a JS front-end developer with 7 years of experience. I like to
+            think and work on front-end problematics, which are specific to web
+            interfaces (front performance, ui, ux...). I also have a solid
+            experience on ReactJS technology and its ecosystem. I worked for
+            large french companies (Oui.sncf, Engie) and websites with high
+            traffic (jeuxvideo.com). Code quality is a strong value for me, I
+            always keep in mind the maintainability of the code I write.
           </blockquote>
-
-          <cite className="font-bold mt-4 text-right text-xs uppercase block">
-            – Thomas Nagel
-          </cite>
         </div>
 
         <figure className="w-2/3 md:w-1/3">
-          <img alt="A dog relaxing" src={dogIllustration} />
+          <img
+            alt="A man watching a big curriculum vitae"
+            src={cvIllustration}
+          />
         </figure>
       </section>
     </Layout>

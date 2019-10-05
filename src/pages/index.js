@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import patternBg from "../images/taieri.svg";
 
 function IndexPage() {
   return (
@@ -12,27 +12,18 @@ function IndexPage() {
         title="Home"
       />
 
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block mx-auto w-1/2"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
-          Hey there! Welcome to your first Gatsby site.
+      <section
+        className="flex flex-col lg:flex-row text-center w-full"
+        style={{ backgroundImage: { patternBg } }}
+      >
+        <h2 className="flex font-bold inline-block items-center my-8 p-10 text-5xl text-gray-700 lg:w-1/2">
+          Hi, I'm Florent. A freelance front-end developper based in Paris.
         </h2>
 
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold no-underline text-gray-900"
-            href="https://tailwindcss.com/"
-          >
-            Tailwind
-          </a>
-          , a utility-first CSS framework.
-        </p>
+        <div
+          className="lg:w-1/2"
+          style={{ backgroundImage: `url(${patternBg})` }}
+        />
       </section>
     </Layout>
   );
