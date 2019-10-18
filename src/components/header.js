@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -17,7 +19,8 @@ function Header() {
     <header>
       <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
         <Link
-          className="flex items-center no-underline text-gray-800 hover:text-gray-600"
+          sx={{ color: "primary" }}
+          className="flex items-center no-underline hover:text-gray-600"
           to="/"
         >
           <span className="font-bold text-xl tracking-tight">
@@ -59,7 +62,8 @@ function Header() {
             }
           ].map(link => (
             <Link
-              className="block md:inline-block mt-4 md:mt-0 md:ml-6 no-underline font-bold text-gray-800 hover:text-gray-600"
+              sx={{ color: "primary" }}
+              className="block md:inline-block mt-4 md:mt-0 md:ml-6 no-underline font-bold hover:text-gray-600"
               key={link.title}
               to={link.route}
             >

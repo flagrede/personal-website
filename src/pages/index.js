@@ -1,4 +1,6 @@
 import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -16,10 +18,12 @@ function IndexPage() {
         className="flex flex-col lg:flex-row text-center w-full"
         style={{ backgroundImage: { patternBg } }}
       >
-        <h2 className="flex font-bold inline-block items-center my-8 p-10 text-5xl text-gray-700 lg:w-1/2">
+        <h2
+          sx={{ color: "text" }}
+          className="flex font-bold inline-block items-center my-8 p-10 text-5xl text-gray-700 lg:w-1/2"
+        >
           Hi, I'm Florent. A freelance front-end developper based in Paris.
         </h2>
-
         <div
           className="lg:w-1/2"
           style={{ backgroundImage: `url(${patternBg})` }}

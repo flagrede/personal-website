@@ -1,4 +1,6 @@
 import React from "react";
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,7 +14,7 @@ function ContactPage() {
       />
       <section className="flex mx-auto">
         <div className="text-center">
-          <p className="leading-loose mb-8 font-bold text-gray-900 text-3xl">
+          <p sx={{color: 'text'}} className="leading-loose mb-8 font-bold text-3xl">
             Work with me !
           </p>
 

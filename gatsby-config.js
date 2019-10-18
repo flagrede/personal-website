@@ -2,11 +2,28 @@ module.exports = {
   siteMetadata: {
     title: `Florent Lagrede`,
     description: `Florent Lagrede personnal website`,
-    author: `@flowlag`
+    author: `Florent Lagrede`,
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/flowlag`
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/flow11`
+      }
+    ]
   },
   plugins: [
-    `gatsby-plugin-preact`,
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        basePath: `/blog`
+      }
+    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-theme-ui`,
+    `gatsby-theme-style-guide`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
