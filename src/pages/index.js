@@ -9,23 +9,35 @@ import patternBg from "../images/taieri.svg";
 function IndexPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
-      />
+      <SEO keywords={[`florent lagrede`, `personal website`]} title="Home" />
 
       <section
-        className="flex flex-col lg:flex-row text-center w-full"
         style={{ backgroundImage: { patternBg } }}
+        sx={{
+          display: "flex",
+          flexDirection: ["column", "column", "row"],
+          textAlign: "center",
+          width: "100%"
+        }}
       >
         <h2
-          sx={{ color: "text" }}
-          className="flex font-bold inline-block items-center my-8 p-10 text-5xl text-gray-700 lg:w-1/2"
+          sx={{
+            display: "flex",
+            fontWeight: "bold",
+            color: "text",
+            fontWeight: "bold",
+            alignItems: "center",
+            my: 8,
+            p: 10,
+            fontSize: "3rem",
+            color: "gray",
+            width: ["100%", "100%", "50%"]
+          }}
         >
           Hi, I'm Florent. A freelance front-end developper based in Paris.
         </h2>
         <div
-          className="lg:w-1/2"
+          sx={{ width: ["100%", "100%", "50%"] }}
           style={{ backgroundImage: `url(${patternBg})` }}
         />
       </section>

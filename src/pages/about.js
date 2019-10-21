@@ -1,6 +1,6 @@
 import React from "react";
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from "theme-ui";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -9,14 +9,27 @@ import cvIllustration from "../images/undraw_online_cv.svg";
 function AboutPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
-      />
+      <SEO keywords={[`florent lagrede`, `experiences`]} title="About" />
 
-      <section className="flex flex-col md:flex-row items-center md:justify-center">
-        <div className="md:w-1/3 md:mr-8">
-          <blockquote sx={{color: 'text', borderColor: 'primary'}} className="border-l-4 border-gray-900 leading-loose pl-4 text-justify">
+      <section
+        sx={{
+          display: "flex",
+          flexDirection: ["column", "row"],
+          alignItems: "center",
+          justifyContent: [null, "center"]
+        }}
+      >
+        <div sx={{ width: [null, "33.333333%"], mr: [null, 3] }}>
+          <blockquote
+            sx={{
+              color: "text",
+              borderColor: "primary",
+              borderLeftWidth: "4px",
+              lineHeight: "body",
+              pl: 2,
+              textAlign: "justify"
+            }}
+          >
             I'm a JS front-end developer with 7 years of experience. I like to
             think and work on front-end problematics, which are specific to web
             interfaces (front performance, ui, ux...). I also have a solid
@@ -27,7 +40,7 @@ function AboutPage() {
           </blockquote>
         </div>
 
-        <figure className="w-2/3 md:w-1/3">
+        <figure sx={{ width: [`${(2 / 3) * 100}%`, `${(1 / 3) * 100}%`] }}>
           <img
             alt="A man watching a big curriculum vitae"
             src={cvIllustration}

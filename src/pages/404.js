@@ -1,4 +1,6 @@
 import React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -8,13 +10,23 @@ function NotFoundPage() {
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <div className="mx-auto">
+      <div sx={{ mx: "auto" }}>
         <img
           alt="Ghost getting abducted by aliens"
-          className="block mx-auto w-1/2"
+          sx={{ display: "block", mx: "auto", width: "50%" }}
           src={abductionIllustration}
         />
-        <h2 className="flex justify-center bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
+        <h2
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "highlight",
+            fontSize: "heading",
+            fontWeight: "bold",
+            my: 3,
+            p: 2
+          }}
+        >
           Looks like this page is a ghost that got abducted by aliens...
         </h2>
       </div>

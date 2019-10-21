@@ -27,21 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `florent-lagrede-website`,
+        short_name: `flagrede`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4dc0b5`,
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`
-      }
-    },
-    `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        purgeOnly: [`src/css/style.css`]
+        icon: `src/images/favicon.png`
       }
     },
     `gatsby-plugin-offline`

@@ -1,14 +1,23 @@
 import PropTypes from "prop-types";
 import React from "react";
-
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Header from "./header";
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col font-sans min-h-screen text-gray-900">
+    <div
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        color: "text"
+      }}
+    >
       <Header />
-
-      <main className="flex flex-basis">{children}</main>
+      <main sx={{ display: "flex", flexBasis: 0, flexGrow: 1 }}>
+        {children}
+      </main>
     </div>
   );
 }

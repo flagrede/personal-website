@@ -17,23 +17,49 @@ function Header() {
 
   return (
     <header>
-      <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
+      <div
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "space-between",
+          maxWidth: "56rem",
+          mx: "auto",
+          p: [2, 3]
+        }}
+      >
         <Link
-          sx={{ color: "primary" }}
-          className="flex items-center no-underline hover:text-gray-600"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            color: "primary",
+            "&:hover": { color: "text" }
+          }}
           to="/"
         >
-          <span className="font-bold text-xl tracking-tight">
+          <span
+            sx={{ fontWeight: "bold", fontSize: 4, letterSpacing: "-0.025em" }}
+          >
             {site.siteMetadata.title}
           </span>
         </Link>
 
         <button
-          className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-gray-800"
+          sx={{
+            display: ["flex", "none"],
+            borderWidth: "1px",
+            borderColor: "background",
+            alignItems: "center",
+            px: 2,
+            py: 1,
+            borderRadius: "0.25rem",
+            color: "text"
+          }}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
-            className="fill-current h-3 w-3"
+            sx={{ height: "0.75rem", width: "0.75rem", fill: "currentColor" }}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -43,9 +69,12 @@ function Header() {
         </button>
 
         <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+          sx={{
+            display: [isExpanded ? "flex" : "none", "flex"],
+            flexDirection: ["column", "row"],
+            alignItems: [null, "center"],
+            width: ["100%", "auto"]
+          }}
         >
           {[
             {
@@ -62,8 +91,15 @@ function Header() {
             }
           ].map(link => (
             <Link
-              sx={{ color: "primary" }}
-              className="block md:inline-block mt-4 md:mt-0 md:ml-6 no-underline font-bold hover:text-gray-600"
+              sx={{
+                color: "primary",
+                display: ["block", "inline-block"],
+                mt: [2, 0],
+                ml: [0, 3],
+                textDecoration: "none",
+                fontWeight: "bold",
+                "&:hover": { color: "text" }
+              }}
               key={link.title}
               to={link.route}
             >
