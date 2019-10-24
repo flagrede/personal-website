@@ -18,7 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-blog`,
       options: {
-        basePath: `/blog`
+        basePath: `/blog`,
+        mdx: false
       }
     },
     `gatsby-plugin-react-helmet`,
@@ -34,6 +35,24 @@ module.exports = {
         theme_color: `#4dc0b5`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400
+            }
+          }
+        ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`
+          }
+        ]
       }
     },
     `gatsby-plugin-offline`
