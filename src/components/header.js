@@ -82,6 +82,10 @@ function Header() {
               title: `Home`
             },
             {
+              route: `/blog`,
+              title: `Blog`
+            },
+            {
               route: `/about`,
               title: `About`
             },
