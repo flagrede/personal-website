@@ -1,7 +1,14 @@
 const latestArticles = [
   {
+    title: "Building better interface in 2020",
+    link: "https://www.flagrede.com/blog/ui-engineer/",
+    date: "2020-01-01",
+    description:
+      "In 2020 I want to explore all the areas that can help me produce better UI. My conviction right now is that…"
+  },
+  {
     title:
-      "[EN] Theme UI, the missing piece for building dynamic design system in React",
+      "Theme UI, the missing piece for building dynamic design system in React",
     link: "https://www.flagrede.com/blog/theme-ui/",
     date: "2019-10-25",
     description:

@@ -66,7 +66,7 @@ function IndexPage() {
             >
               Latest articles:
             </h2>
-            {latestArticles.slice(0, 3).map(article => (
+            {latestArticles.map(article => (
               <li>
                 <Styled.h2
                   sx={{
